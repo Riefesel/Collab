@@ -219,6 +219,11 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
 
 }
 
+.activities { /*sets activiies images for index of Larose Forest */
+    border-radius: 100%;
+    padding: 15px;
+
+}
 .profiles { /*sets images to greyscale for bios */
     filter: grayscale(100%);
     border-radius: 100%;
