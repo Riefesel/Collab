@@ -24,186 +24,193 @@
         </header> 
         <main>
             <section>
-                <h2 class="projectTitle">Trail Map Development Process</h2>
+                <h2 class="projectTitle">Methodologies Used</h2>
 
-                <!-- Start of Topic Selection -->
-                <article class="ContentParagraph"><h3 class="underlineTitle">Topic Selection</h3> 
-                    <p> Our project centers on the Vancouver Island Trail on Vancouver Island in British Columbia.  The trail is currently under construction
-                        and is being promoted and monitored by the Vancouver Island Trail Association (VITA).
-                        Some members of our group are working with VITA for their final collaborative work, and this project is the first blush of web map possibilities
-                        for the trail.</p>
+                <!-- Start of Data Acquisition and Processing -->
+                <article class="ContentParagraph"><h3 class="underlineTitle">Data Acquisition and Processing</h3> 
+                    <p> The project team was provided with GIS and point cloud data from the client for all forested land within UCPR. Additionally, the client provided
+                        the forest management plan and its current 5-year operations plan.  </p>
                 </article>
-                    
-                    <article class = "serve leftText">
-                        <div class="textZone">
-                            <h4> Initial Overview</h4>
-                            <p> VITA's website contains only PDF images of maps; there are no active interfaces for users and no capabilities for hikers to investigate sections of trails
-                                for possible hikes. Our group, VITA2022, therefore decided to focus on providing one or more options for an interactive web map solution. As described below, we explored several ideas for integrating
-                                various features into the interactive web map. 
-                            </p>
-                        </div>
-                        <figure class="picBox">
-                            <img src="images/Process_images/VITmap.jpg" alt="VIT map" class="smallimageright">
-                        </figure> 
-                    </article>
-
-                    <article class = "serve rightText">
-                        <div class="textZone">
-                        <h4>Possible Features Within Map</h4>
-                        <p>The initial concept floated was a web-based GIS solution incorporating open-source data for wildlife sightings and weather 
-                            forecasts to make an informative and accessible web map of the Vancouver Island Trail. A map, possibly derived from either 
-                            Google Maps JavaScript API or Leaflet would include pop-up information on geo-referenced wildlife sightings from
-                            <a href = https://www.inaturalist.org/ target="_blank">iNaturalist</a>, or possibly weather forecasts from <a href = https://openweathermap.org/ target="_blank">OpenWeather Live</a>.
-                            Base mapping data was also to be sourced from <a href =https://www.openstreetmap.org/ target="_blank">Open Street Maps</a>.<br>
-                            Upon review of Google Maps, however, we realized the potential cost to our non-profit client would be prohibitive,
-                            so our focus shifted to other map options. Furthermore, it was pointed out to us that the project scope was too large 
-                            and we were advised to pull back our ambitions and focus solely on creating a web map of the trail itself. We dropped the idea of incorporating the wildlife sightings
-                            and weather forecasts.
+                <article class = "serve leftText">
+                    <div class="textZone">
+                        <h4> Additional Data Collection</h4>
+                        <p> The team assembled base data from various sources for roads, watercourses, trails, and soils. Data resources were collected from the 
+                                Province  of Ontario <a href = https://geohub.lio.gov.on.ca/ target="_blank">Ontario GeoHub</a> (for roads, soils, watercourse and water bodies), 
+                                the United Counties of Prescott and Russell (UCPR) as the owner of the lands (trail routes and ortho imagery). 
                         </p>
-                        </div>
-                        <figure class="picBox">
-                            <img src="images/Process_images/iNaturalist_logo.png" alt="iNaturlist logo" class="smallimageleft">
-                        </figure>
-                    </article>
-
-                    <!-- Start of Exploring Technologies -->
-                    <article class="ContentParagraph"><h3 class="underlineTitle">Exploring Technologies and Scope Changes</h3> 
-                        <p> The map is key to the project and the team spent considerable time researching all possible map alternatives.</p>
-                        <article class = "serve leftText">
-                            <div class="textZone">
-                            <h4>Exploring Technologies for Map</h4>
-                            <p> Team members researched additional alternative map solutions and explored online tutorials for Experience Builder, Geocortex, 
-                                Leaflet, Mapbox, and StoryMaps.  Experience Builder can portray a map, but its real power is to showcase data analysis and statistics. Those functions were not
-                                the focus of this project, so Experience Builder was discarded. Team member experience with Geocortex and review of past Fleming College projects revealed that Geocortex
-                                is not a reliable tool to use, so it too was put aside. Ultimately, we opted to center on using either Esri Leaflet, StoryMaps, or Mapbox for the base map 
-                                stored on an ArcGIS server. Since our client is a non-profit agency, we proposed to narrow our focus even more to use well-documented open source solutions.  
-                            </p>  
-                            </div>
-                            <figure class="picBox">
-                                <img src="images/Process_images/Leaflet.jpg" alt="Leaflet logo" class="smallimageright">
-                            </figure>
-                        </article>
-                        <article class = "serve rightText">
-                            <div class = "textZone">
-                            <h4>Trail Map Using Open-Source Esri Technologies</h4>
-                            <p> After the initial meeting with our professor about our direction using Esri Leaflet, StoryMaps, or Mapbox, we were directed towards specifically open-source Esri solutions.
-                                Taking into consideration, our already-proof working StoryMap that we've used initially before the scope change, we continued to develop the map and add more functionality.
-                                For the hosting data portion of the project, we continued to use <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> for contribution purposes and storage of map feature layers, the StoryMaps map, and other miscellaneous
-                                items for use in our project. Another component of the project that we decided to implement after a second touch base with our professor was the use of <a href="https://developers.arcgis.com/javascript/latest/" target="_blank">ArcGIS API for JavaScript.</a>
-                                This portion of the project was selected because the StoryMaps map that we developed only gave the option of a "guided" tour, showcasing the different sections and trail heads 
-                                throughout the trail system. In response to this, we decided to make an interactive "self-guided" version of our proposed map that allows the user to zoom in/out, see elevation profiles
-                                of different sections of the trail, select between different base maps to extract more context out of the map, showcase their location using the location service, and have a glance
-                                at the different trail sections by viewing the legend. 
-                            </p>  
-                            </div>  
-                            <figure class="picBox">
-                                <img src="images/Process_images/OpenSourceImage.jpg" alt="Our StoryMap" class="smallimageleft"> <!-- Images from: https://scontent.fyto1-2.fna.fbcdn.net/v/t1.18169-9/27072826_391994361261038_3272651241882990206_n.png?stp=cp0_dst-png_p64x64&_nc_cat=108&ccb=1-5&_nc_sid=85a577&_nc_ohc=2mDaJRZl2bgAX9BRQnI&_nc_ht=scontent.fyto1-2.fna&oh=00_AT9GOKiv61RQ-yFLo-3pMb5rcqNTTDftW9TFsjUjZgrKKg&oe=628506C3, https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/StoryMaps.png -->
-                            </figure>
-                        </article>
-                        <article class = "serve leftText">
-                            <div class = "textZone">
-                            <h4>Sharing and contribution via ArcGIS Online (AGOL)</h4>
-                            <p> Early on in the project, we had discussed and explored how and where our data for our trail maps will be stored. Based on that conversation along with a meeting with our professor on
-                                the matter, we decided to store, use and contribute to AGOL. To execute this, we created a shared update group with a folder repository of our project items on AGOL. Once the shared group and folder repository was established, data found
-                                on VITA’s website and other additional data needed were brought into the AGOL folder environment which we used to make the StoryMaps and store it along with the trail data for the ArcGIS
-                                API for JavaScript map.
-                            </p>  
-                            </div>  
-                            <figure class="picBox">
-                                <img src="images/Process_images/ArcGISOnlineLogo.png" alt=" API map" class="smallimageright"> <!-- Image from: https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGISOnline.png -->
-                            </figure>         
-                        </article>
+                    </div>
+                    <figure class="picBox">
+                        <img src="photos/logos/GeoHub.png" alt="GeoHub Logo" class="smallimageright">
+                    </figure> 
                 </article>
 
-                <!-- Start of Data Acquisition -->
+                <article class = "serve rightText">
+                    <div class="textZone">
+                    <h4>Data Processing</h4>
+                    <p> 
+                        All CRIBE data was downloaded from CRIBE’s ArcGIS Online portal and brought into ArcGIS Pro on each team member's laptops. The GeoHUB data was added, as well as the UCPR 
+                        trail data and DRAPE photos.  All data was converted to NAD83 UTM Zone 18N projection and clipped to the contiguous portion of the Larose Forest.  Any raster created for 
+                        the project was assigned a 5m cell size.   
+                    </p>
+                    </div>
+                    <figure class="picBox">
+                        <img src="photos/logos/ArcGIS-Pro.png" alt="ArcGIS Pro" class="smallimageleft"> <!-- Image from: https://www.esri.com/content/dam/esrisites/en-us/common/icons/product-logos/ArcGISOnline.png --> 
+                    </figure>
+                </article>
+                <article class = "serve leftText">
+                    <div class = "textZone">
+                    <h4>Sharing Data Portals</h4>
+                    <p> Due to the volume of data needed for our project, the team made extensive use of 
+                        <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank">ArcGIS Online (AGOL)</a> to store, use and share our data. A base map was 
+                        created and published to the group’s work area created on Fleming’s AGOL portal so all members were assured to use the same base data at the start of the project. Any 
+                        new layers created during the project was published to the group portal.  Additionally, the 2020 DRAPE air photos were accessed through UCPR's portal as cached viewable
+                        photos.
+                    </p>  
+                    </div>  
+                    <figure class="picBox">
+                        <img src="photos/Logos/ArcGIS Online.png" alt=" API map" class="smallimageright"> <!--Reference: https://www.esri.ca/en-ca/store/overview-->
+                    </figure>         
+                </article>
+                 <!-- Start of LiDAR  Processing -->
+                <article class="ContentParagraph"><h3 class="underlineTitle">LiDAR Processing</h3> 
+                    <p> Being able to show the public a 3D view of the forest and its trails is key to explaining the importance and impact of forest management.  The team spent considerable 
+                        time researching and creating different methods to show 3D views.</p>
+                <article class = "serve leftText">
+                    <div class="textZone">
+                    <h4>LiDAR Point Cloud Data Processing</h4>
+                     <p> Cut/Paste from the LiDAR Processing section of the final report.  For now, here is a space filler to get a sense of how long our web page will be.  "Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p>  
+                    <p> Even more....  "Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p> 
+                    <p> And yet more AGAIN!     "Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p> 
+                    </div>
+                    <figure class="picBox">
+                        <img src="photos/Map Output/LiDAR Point DRAFT.jpg" alt="LiDAR Point Cloud" class="smallimageright"> 
+                    </figure>
+                </article>
+                 <article class = "serve rightText">
+                    <div class = "textZone">
+                    <h4>3D Scenes</h4>
+                    <p> This is where we put the blurb from the final report that is all about the 3D Scenes. I'm putting in lots of text here to fill up the screen but 
+                        this should be deleted for the final product.
+                    </p>  
+                    </div>  
+                    <figure class="picBox">
+                        <img src="photos/Map Output/3D Scene DRAFT.jpg" alt="3D Scene" class="smallimageleft"> 
+                    </figure>
+                </article>
+                </article>
+
+                <!-- Start of Spatial Analysis -->
                 <article> 
                     <div class="ContentParagraph">
-                        <h3 class="underlineTitle">Data Acquisition, Processing and Publishing</h3> 
-                        <p> This segment in our methodology covers the process of acquiring the raw data to establishing our ArcGIS Online Web-map.</p>
-                        <h4>Examining the Data</h4>
-                        <p> Our data acquisition was made simple as most, if not all, of our trail data was available from our collaborative project client’s 
-                            (VITA) website <a href = "https://vi-trail.ca/">https://vi-trail.ca/</a>. This included the trail tracks and the trailhead data from their trail maps 
-                            and guidebook respectively. The trail tracks (polyline) and trailhead (points) would serve as the primary operational layers in this application.</p> 
-                        <p> Upon exploration of VITA’s resources, it was discovered that trail track data became increasingly sparse/unavailable towards the northern 
-                            portion of the trail. The availability of this data dictated the geographic scope of our trail map; hence, the necessary scope change from earlier. 
-                            Thus, it was decided to only include the consistent southern portion of the Vancouver Island trail in our trail map, from Point Clover in Victoria, 
-                            BC to Port Alberni.</p> 
-                        <h4>Trail Track Data</h4>
-                        <p> Firstly, the trail tracks (the polyline features) from Point Clover to Port Alberni were acquired as 7 GPX files, representing 7 trail segments. 
-                            These GPX files were converted into a GeoJSON file using <a href="https://geojson.io/#map=2/20.0/0.0">geojson.io</a>. This GeoJSON file would be 
-                            published into ArcGIS Online as a hosted feature layer.</p>
-                            <img class="solutionImage" src="images/Process_images/geoJSON_io2.JPG" alt="GeoJSON Map">
-                        <h4>Trailhead Data</h4>
-                        <p> Secondly, the trailhead data was needed in the form of point features. This was trickier since trailheads were not originally in digital format 
-                            but in coordinate (latitude/longitude) descriptions in the trail guide book. Similar to the trail track data, trailhead data became increasingly 
-                            sparse and inconsistent towards the northern portions and thus, for consistency and completeness, we resorted to using only the southern trailheads from 
-                            Point Clover to Port Alberni. These trailheads aligned with the trail track data, however with a discrepancy that 14 trailhead points were acquired in 
-                            contrast to the 7 trail tracks/segments acquired previously. It was found that the 7 trail segments used the same trailheads to define the start-end of 
-                            the segment just at different distances. Thus, the trailhead and trail track data are valid. We formed the trailhead data in a CSV format from the trail guide book on the VITA website and 
-                            published the trail heads as a hosted feature layer.</p>
-                        <p> A CSV file was drafted to store and tabulate the trailhead latitude and longitude coordinates. In this table, trailhead start and end names and length were included. 
-                            This CSV file would then be published onto ArcGIS Online as a hosted feature layer, with the lat/long coordinates representing the point feature.</p>
-                        <h4>Initial Base Map</h4>
-                        <p> With the trail tracks (polyline features) and trailhead (point) features, an initial web map was created with appropriate symbology set up to emphasize the trail data: 
-                            <a href="https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=46df05449e524dc0993b114f96eaa12c">Vancouver Island Trail Map</a>. This web map would serve as 
-                            the base map for future configurable solutions to be built upon.</p> 
-                        <img class="solutionImage" src="images/Process_images/AGOL_basemap2.jpg" alt="GeoJSON Map">  
+                    <h3 class="underlineTitle">Spatial Analysis</h3> 
+                    <p> This segment in our methodology covers the process of locating possible new trail routes for those trails that will be impacted by forest harvesting, as well
+                        as the calculations of income generated by forest harvesting.
+                    </p>
+                    <h4>Determining Where Harvesting Will Take Place</h4>
+                    <p> Our client had provided a polygon layer of all the forest woodlots.  Detailed information for each woodlot included the year of proposed harvesting
+                        as well as the suggested harvest method.  The client requested we investigate only the woodlots that are in the current 5-year operations plan (spanning 
+                        the years 2021 to 2025), and requested we focus exclusively on the 2022-to 2025 time frame.  The woodlot (polygons), trailheads (points), and trails (polylines)
+                        would serve as the primary operational layers in this application.
+                    </p> 
+                    <p> Upon further discussion with the client and the UCPR forest manager, the decision was made to focus on hiking and biking trails since these are the most popular trails,
+                        and the ones most impacted by trail closures.  So although some woodlots are being harvested in the 2022-2025 time frame, if they have no trails or if there are trails 
+                        that are not hiking or cycling, they were not considered for analysis.
+                    </p> 
+                    <img class="solutionImage" src="photos/Map Output/Existing Trails DRAFT.jpg" alt="Existing Trails Map">
+                    <h4>Parameters for Analysis</h4>
+                    <p> These parameters were investigated as inputs for the least cost path analysis:
+                        <ul>
+                            <li>Distance to Water</li>
+                            <li>Distance to Roads</li>
+                            <li>Distance to Houses or Buildings</li>
+                            <li>Soil Drainage</li>
+                            <li>Age of Trees within Forest Stands</li>
+                            <li>Ground Slope</li>
+                            <li>TYpe of Proposed Harvesting</li>
+                            <li>Year of Proposed Harvesting</li>
+                        </ul>  
+                    </p>
+                    <p>
+                        If portions of the recreational trails are affected, a least cost path analysis was carried out to suggest an alternative route for a trail by-pass. The team created 
+                        a weighted cost surface of the Larose Forest from the criteria listed above that will influence trail quality. An example of alternative trails can be seen below, where the
+                        existing trails are shown in green, and the proposed trails are in red.    
+                    </p>
+                            <img class="solutionImage" src="photos/Map Output/Proposed Trails DRAFT.jpg" alt="Proposed Trails">
+                    <h4>Forest Income</h4>
+                    <p> By querying the forest woodlots polygon, the team was able to deduce which areas were to be harvested in the 2022 to 2025 time frame.  In addition, the area of each
+                        harvest, the tree species, and the biomass volume data could be extracted from the GIS.  Based on input from the client, approximate income streams from each woodlot
+                        was calculated in ModelBuilder models.  Should prices change from year to year, a simple change to the unit rate re-calculates potential income to current values.  Having 
+                        this information, the client can show to the public the financial benefits of harvesting that could potentially be re-invested back into  Larose Forest infrastructure.  
+                        TO BE CONTINUED ONCE I"VE RUN THE MODELS.
+                    </p> 
                     </div>
                 </article>
 
-                <!-- Start of StoryMaps -->
+                <!-- Start of Experience Builder -->
                 <article> 
-                    <div class="ContentParagraph"><h3 class="underlineTitle">Creating a StoryMaps Map</h3>
-                        <h4>Lead-Up</h4> 
-                        <p> For our first web configurable we created an ArcGIS StoryMaps map to produce a web solution from our problem statement. ArcGIS StoryMaps is a story authoring a web-based 
-                            application that allows developers to create a narrative using maps, text, and other multimedia content. Given that the Vancouver Island Trail is not yet fully 
-                            complete, we thought StoryMaps would be a great way for potential recreators to explore the developed sections of the trail through a guided map tour.
-                        </p>
-                        <h4>Process</h4>
-                        <p> In preparation for building the StoryMaps, our team created a Shared Update group on our college’s AGOL account to allow all team members to contribute to the editing 
-                            of the StoryMaps. The group administrator invited other team members with roles set to manager to allow members to edit and publish the StoryMaps. 
-                        </p>
-                        <p> To create a StoryMaps map, we visited the ArcGIS StoryMaps site and chose to develop a new story using the Start from Scratch option. Team members filled out cover 
-                            information, which included adding our logo, trail system name, authorship, and brief description of the trail system. A Map Tour was then added into the 
-                            StoryMaps following the trail system descriptions. Within StoryMaps, there are two options when creating a Map Tour, and our team explored both the data-driven 
-                            and non-data driven approach to decide which style of Map Tour was best suited the project’s goals.    
-                        </p>
-                        <h5>Data Driven Approach</h5>
-                        <p> We first selected the data-driven approach which allowed us to upload exact trailhead point data into the StoryMaps from our AGOL account as the stopping points 
-                            along the Map Tour. This approach automatically created the stopping points for the Map Tour and drew trail names from each of the point features. The side panel 
-                            for each tour stop or trailhead was auto-populated with the trail name from the trailhead point feature class. Where the side panel was driven by the trailhead 
-                            feature class, it was not mutable in StoryMaps, and only contained the trailhead name. Our team also adjusted the view of the map for each stop to adjust the zoom 
-                            level. Using a data-driven approach, only 2D map visualizations were available.
-                        </p>
-                        <h5>Non-Data Driven Approach</h5>
-                        <p> As an alternative approach, we explored creating a Map Tour using a non-data driven approach where trailheads were added on the map manually. Our team added trail 
-                            heads on the map to correspond to the base map that had trailhead point features and trail polylines visualized. Where trailheads were placed manually, the side 
-                            panels were not auto populated with data and our team was able to add photos, trailhead names, and trail descriptions in the side panel. Our team also adjusted 
-                            the view of the map for each stop to adjust zoom level and 3D perspective by adjusting the aspect.
-                        </p>
-                        <h4>Discussion on Shortfalls, Limitations or What Went Wrong</h4>
-                        <p> Based on our exploration of creating a Map Tour in our StoryMaps, our team decided to use the non-data driven approach to create a guided tour of the Vancouver Island 
-                            Trail. Although the data-driven approach secured the most accurate locations for trailheads, it autogenerated the Map Tour from the trailhead feature layer data 
-                            exclusively, creating stops at each trailhead in the trailhead feature layer. The auto generation of the tour extended to the descriptive side panels for each trail 
-                            head or tour stop as well. Where the side panels were autogenerated using a data-driven approach, we could not add in trail photos, trail profile graphs, and include 
-                            trail descriptions into the panel while using StoryMaps. While using a non-data driven approach, each stop and associated description side panel was created manually 
-                            which allowed us to add in trail names, elevation profiles, trail descriptions, and photos. 
-                        </p>
-                        <p> The data driven approach also did not allow us to create a 3D perspective of the trail. Given the diverse topography of the area, we wanted to highlight elevation ranges 
-                            using a 3D perspective of the trail system. The data driven approach only accepted point features as stops, and in between each trailhead stop, the pan to the next trailhead 
-                            was linear and fast, resulting in the tour not visualizing the trail for the user well but just the trailhead. Using a non-data driven with trailheads as stops, we were able 
-                            to adjust the 2D scene into a 3D scene and change the perspective of the map by adjusting the aspect to influence the pan between stops to show the trail section. With the 
-                            capabilities of a 3D scene, we angled the perspective so that the view at any time in the tour was from one trailhead to the next. When moving onto the next trailhead, the 
-                            map panned with the direction of the trail allowing the user to observe the trail.
-                        </p>
-                        <p> Although the non-data driven approach was not as accurate for trailhead locations, we were able to include accurate data for trailheads onto the base map used in the non-data 
-                            driven approach and manually add in tour stops that corresponded to the trailhead feature layer. Given that the purpose of the StoryMaps is not for navigation but rather for 
-                            guiding and introducing users to the Vancouver Island Trail through a guided tour, we decided that the trailhead stops did not have to be accurate to a navigational standard. 
-                        </p>
-                        <p> In our final review of our created StoryMaps, there were some technical limitations with the configurable tool that did not cover our vision for a web application for the 
-                            Vancouver Island Trail. We needed to create an additional solution that was more customizable, that would allow a user to explore the area through a self-guided tour and query 
-                            from the web map.  
-                        </p>
+                    <div class="ContentParagraph">
+                    <h3 class="underlineTitle">Creating a Web App Using Experience Builder</h3>
+                    <p> This segment in our methodology covers the process of building the web app that our client could use to reach out to the public about forest management
+                        and explain how trails may be impacted.</p>
+                    <h4>Why Experience Builder?</h4> 
+                    <p> Just Christie's suggestion and delete if you want.  A brief explanation as to why we are using Experience Builder.
+                    </p>
+                    <h4>Process</h4>
+                    <p> In preparation for building the Experience Builder web app, our team created a Shared Update group on our client's AGOL account to allow all team members to contribute 
+                        to the editing. Megan to expand ... 
+                    </p>
+                    <p> For now, here is a space filler to get a sense of how long our web page will be.  "Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".    
+                    </p>
+                    <h5>Flyover</h5>
+                    <p> Christie's suggestion that can be deleted if you want.  Includ a separate BECAUSE IT IS COOL!!!! "Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+                    </p>
+                    <h5>Extra Info to Add?</h5>
+                    <p> Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                    </p>
+                    <h4>Discussion on Shortfalls, Limitations or What Went Wrong</h4>
+                    <p> Based on our exploration of creating a Map Tour in our StoryMaps, our team decided to use the non-data driven approach to create a guided tour of the Vancouver Island 
+                        Trail. Although the data-driven approach secured the most accurate locations for trailheads, it autogenerated the Map Tour from the trailhead feature layer data 
+                        exclusively, creating stops at each trailhead in the trailhead feature layer. The auto generation of the tour extended to the descriptive side panels for each trail 
+                        head or tour stop as well. Where the side panels were autogenerated using a data-driven approach, we could not add in trail photos, trail profile graphs, and include 
+                        trail descriptions into the panel while using StoryMaps. While using a non-data driven approach, each stop and associated description side panel was created manually 
+                        which allowed us to add in trail names, elevation profiles, trail descriptions, and photos. 
+                    </p>
+                    <p> The data driven approach also did not allow us to create a 3D perspective of the trail. Given the diverse topography of the area, we wanted to highlight elevation ranges 
+                        using a 3D perspective of the trail system. The data driven approach only accepted point features as stops, and in between each trailhead stop, the pan to the next trailhead 
+                        was linear and fast, resulting in the tour not visualizing the trail for the user well but just the trailhead. Using a non-data driven with trailheads as stops, we were able 
+                        to adjust the 2D scene into a 3D scene and change the perspective of the map by adjusting the aspect to influence the pan between stops to show the trail section. With the 
+                         capabilities of a 3D scene, we angled the perspective so that the view at any time in the tour was from one trailhead to the next. When moving onto the next trailhead, the 
+                         map panned with the direction of the trail allowing the user to observe the trail.
+                    </p>
+                    <p> Although the non-data driven approach was not as accurate for trailhead locations, we were able to include accurate data for trailheads onto the base map used in the non-data 
+                        driven approach and manually add in tour stops that corresponded to the trailhead feature layer. Given that the purpose of the StoryMaps is not for navigation but rather for 
+                        guiding and introducing users to the Vancouver Island Trail through a guided tour, we decided that the trailhead stops did not have to be accurate to a navigational standard. 
+                    </p>
+                    <p> In our final review of our created StoryMaps, there were some technical limitations with the configurable tool that did not cover our vision for a web application for the 
+                        Vancouver Island Trail. We needed to create an additional solution that was more customizable, that would allow a user to explore the area through a self-guided tour and query 
+                        from the web map.  
+                    </p>
                     </div>
                 </article>
 
