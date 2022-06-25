@@ -176,6 +176,14 @@ footer { /* footer formatting sourced from https://www.w3schools.com/cssref/pr_c
     padding-top: 15px;
 }
 
+.scene{
+    text-decoration:none;
+    color: #eceee6;
+    background-color: #0d8a41;
+    padding: 10px;
+    border-style: outset;
+}
+
 .deadlink { 
 	text-decoration:none;
 }    
